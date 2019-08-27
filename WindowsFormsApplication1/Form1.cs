@@ -53,44 +53,32 @@ namespace WindowsFormsApplication1
            
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked)
-            { string g = radioButton2.Text; }            
-            
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
+       
+ private void textBox6_TextChanged(object sender, EventArgs e)
         {
             
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked)
-            { string g = radioButton2.Text; }
-           
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string a = name.Text;
-            string b = name.Text;
-            Boolean isMale = radioButton1.Checked;
-            Boolean isFemale = radioButton2.Checked;
-             if(radioButton2.Checked)
-             { string g = radioButton2.Text; }
+            string b = fatherName.Text;
+  
             Double d = Convert.ToDouble(phoneNumber.Text);
             string c = textBox7.Text;
-            if(radioButton1.Checked)
-                {string f = radioButton1.Text;}
+          
             string h = comboBox1.Text;
             double z = Convert.ToDouble(textBox6.Text);
            
             StreamWriter save = new StreamWriter("addmission form");
             save.WriteLine(a);
             save.WriteLine(b);
+            Boolean isMale = radioButton1.Checked;
+             if (isMale == true)save.WriteLine("male ");
+             Boolean isFemale = radioButton2.Checked;
+            if (isFemale == true) save.WriteLine("female ");
+           
             save.WriteLine(c);
             save.WriteLine(d);
             save.WriteLine(h);
@@ -99,6 +87,11 @@ namespace WindowsFormsApplication1
             
            
            
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -52,7 +52,8 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(100, 20);
             this.name.TabIndex = 0;
-            this.name.Text = "as";
+            this.name.Text = "";
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // fatherName
             // 
@@ -184,7 +185,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "male ";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+   
             // 
             // radioButton2
             // 
@@ -196,7 +197,6 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "female";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // Form1
             // 
